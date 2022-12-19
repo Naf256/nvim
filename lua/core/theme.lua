@@ -1,7 +1,4 @@
--- themes
-
 -- themes with special settings
-
 -- onedark
 -- Lua
 require('onedark').setup  {
