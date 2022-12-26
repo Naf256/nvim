@@ -1,6 +1,6 @@
 -- packer.nvim
 vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function()
+return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- starup time optimise
@@ -16,7 +16,7 @@ return require('packer').startup(function()
 	use 'moll/vim-bbye' -- for more sensible delete buffer cmd
 
 	-- themes (disabled other themes to optimize startup time)
-    --	  use 'sainnhe/sonokai'
+    use 'sainnhe/sonokai'
 	--	  use 'dikiaap/minimalist'
 	--    use 'kaicataldo/material.vim'
 	--	  use ({ 'projekt0n/github-nvim-theme' })
