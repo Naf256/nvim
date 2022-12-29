@@ -17,6 +17,8 @@ return require('packer').startup(function(use)
 
 	-- themes (disabled other themes to optimize startup time)
     use 'sainnhe/sonokai'
+
+	--	use { "catppuccin/nvim", as = "catppuccin" }
 	--	  use 'dikiaap/minimalist'
 	--    use 'kaicataldo/material.vim'
 	--	  use ({ 'projekt0n/github-nvim-theme' })

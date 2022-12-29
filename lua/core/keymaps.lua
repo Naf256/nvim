@@ -7,7 +7,7 @@ vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ff', ':NvimTreeFocus<cr>')
 -- y: telescope
-vim.keymap.set('n', '<space>ff', function() require'telescope.builtin'.find_files{} end)
+vim.keymap.set('n', '<space>f', function() require'telescope.builtin'.find_files{} end)
 vim.keymap.set('n', '<F10>', function() require'telescope.builtin'.git_files{} end)
 vim.keymap.set('n', '<F11>', function() require'telescope.builtin'.buffers{} end)
 vim.keymap.set({'n', 'i'}, '<C-p>', function() require'telescope.builtin'.registers{} end)
