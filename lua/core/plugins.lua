@@ -88,9 +88,6 @@ return require('packer').startup(function(use)
 	-- indent guide
 	use "lukas-reineke/indent-blankline.nvim"
 
-	-- startup screen
-	use 'leslie255/aleph-nvim'
-
 	-- english grammar check
 	use 'rhysd/vim-grammarous'
 
