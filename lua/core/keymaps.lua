@@ -21,6 +21,8 @@ vim.keymap.set('n', '<leader>cQ', ':q!<cr>')
 vim.keymap.set('n', '<leader>cx', ':x<cr>')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', 'm', 'mj')
+vim.keymap.set('n', '`', '`jzz')
 -- w: window
 vim.keymap.set('n', '<leader>wh', '<c-w>h')
 vim.keymap.set('n', '<leader>wj', '<c-w>j')
