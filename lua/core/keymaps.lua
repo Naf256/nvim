@@ -12,8 +12,8 @@ vim.keymap.set('n', '<F10>', function() require'telescope.builtin'.git_files{} e
 vim.keymap.set('n', '<F11>', function() require'telescope.builtin'.buffers{} end)
 vim.keymap.set({'n', 'i'}, '<C-p>', function() require'telescope.builtin'.registers{} end)
 -- c: quick command
-vim.keymap.set('n', '<leader>ce', ':e<space>')
-vim.keymap.set('n', '<leader>cw', ':w<cr>')
+vim.keymap.set('n', '<space>e', ':e<space>')
+vim.keymap.set('n', '<space>w', ':w<cr>')
 vim.keymap.set('n', '<leader>cW', ':wa<cr>')
 vim.keymap.set('n', '<leader>cE', ':e!<cr>')
 vim.keymap.set('n', '<leader>cq', ':q<cr>')

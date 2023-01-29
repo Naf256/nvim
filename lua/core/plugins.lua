@@ -23,13 +23,12 @@ return require('packer').startup(function(use)
 	--    use 'kaicataldo/material.vim'
 	--	  use ({ 'projekt0n/github-nvim-theme' })
 	--    use 'marko-cerovac/material.nvim'
-	--    use 'tiagovla/tokyodark.nvim'
+	--	  use 'tiagovla/tokyodark.nvim'
 -- Using Packer
 -- Packer
 ---- Using Packer
 	use 'navarasu/onedark.nvim'
 	--	  use 'arzg/vim-colors-xcode'	
-
     --    use 'ellisonleao/gruvbox.nvim'
 	--	  use { 'catppuccin/nvim', as='catppuccin' }
 	--    use 'shaunsingh/nord.nvim'
@@ -37,8 +36,6 @@ return require('packer').startup(function(use)
 	--    use 'liuchengxu/space-vim-dark'
 	--    use 'ahmedabdulrahman/aylin.vim'
 	--    use "rebelot/kanagawa.nvim"
-	--    use 'NLKNguyen/papercolor-theme'
-	--    use 'liuchengxu/space-vim-dark'
 
 	-- file tree
 	use {
