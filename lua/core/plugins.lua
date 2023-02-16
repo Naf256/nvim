@@ -108,6 +108,5 @@ return require('packer').startup(function(use)
 	use 'maxmellon/vim-jsx-pretty' --JS and JSX syntax
 	use 'jparise/vim-graphql' --GraphQL syntax
 	use 'mattn/emmet-vim'
-	
 
 end)
