@@ -17,7 +17,6 @@ require('onedark').setup  {
     -- Options are italic, bold, underline, none
     -- You can configure multiple style with comma seperated, For e.g., keywords = 'italic,bold'
     code_style = {
-        comments = 'italic',
         keywords = 'none',
         functions = 'none',
         strings = 'none',

@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
 		requires = 'kyazdani42/nvim-web-devicons'
 	}
 	use 'moll/vim-bbye' -- for more sensible delete buffer cmd
+	use 'numToStr/Comment.nvim' -- "gc" to comment visual selection
 
 	-- themes (disabled other themes to optimize startup time)
     use 'sainnhe/sonokai'

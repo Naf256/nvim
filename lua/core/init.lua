@@ -1,23 +1,35 @@
 -- basics
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
-vim.opt.number          = true
-vim.opt.relativenumber  = true
-vim.opt.termguicolors   = true
-vim.opt.shiftround      = true
-vim.opt.updatetime      = 100
-vim.opt.cursorline      = true
-vim.opt.autowrite       = true
-vim.opt.hlsearch		= false
-vim.opt.swapfile		= false
+vim.o.number          = true
+vim.o.relativenumber  = true
+vim.o.termguicolors   = true
+vim.o.shiftround      = true
+vim.o.updatetime      = 250
+vim.o.autowrite       = true
+vim.o.hlsearch		  = false
+vim.o.swapfile		  = false
+vim.o.undofile		  = true
+vim.o.ignorecase	  = true
+vim.o.smartcase		  = true
+
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = '*',
+})
+
 if (vim.fn.has('termguicolors') == 1) then
     vim.opt.termguicolors = true
 end
 -- tabs
-vim.opt.autoindent      = true
-vim.opt.tabstop         = 4
-vim.opt.shiftwidth      = 4
-vim.opt.softtabstop     = 4
+vim.o.autoindent      = true
+vim.o.tabstop         = 4
+vim.o.shiftwidth      = 4
+vim.o.softtabstop     = 4
 
 require("core.plugins")
 -- disable some useless standard plugins to save startup time
@@ -55,6 +67,7 @@ require("nvim-autopairs")
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("telescope").setup()
+require("Comment").setup()
 
 --load keybindings
 require("core.keymaps")
