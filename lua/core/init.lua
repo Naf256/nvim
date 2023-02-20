@@ -12,6 +12,7 @@ vim.o.swapfile		  = false
 vim.o.undofile		  = true
 vim.o.ignorecase	  = true
 vim.o.smartcase		  = true
+vim.o.completeopt	  = 'menuone,noselect'
 
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
