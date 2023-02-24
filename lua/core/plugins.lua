@@ -1,113 +1,124 @@
--- packer.nvim
-vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require('lazy').setup({
+	 'wbthomason/packer.nvim',
 
 	-- starup time optimise
-	use 'dstein64/vim-startuptime'
-	use 'lewis6991/impatient.nvim'
-	use 'nathom/filetype.nvim'
+	 'dstein64/vim-startuptime',
+	 'lewis6991/impatient.nvim',
+	 'nathom/filetype.nvim',
 
 	-- buffer
-	use {
+	 {
 		'akinsho/bufferline.nvim',
-		requires = 'kyazdani42/nvim-web-devicons'
-	}
-	use 'moll/vim-bbye' -- for more sensible delete buffer cmd
-	use 'numToStr/Comment.nvim' -- "gc" to comment visual selection
+		dependencies = 'kyazdani42/nvim-web-devicons',
+	},
+	 'moll/vim-bbye', -- for more sensible delete buffer cmd
+	 'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
 	-- themes (disabled other themes to optimize startup time)
-    use 'sainnhe/sonokai'
+     'sainnhe/sonokai',
 
-	--	use { "catppuccin/nvim", as = "catppuccin" }
-	--	  use 'dikiaap/minimalist'
-	--    use 'kaicataldo/material.vim'
-	--	  use ({ 'projekt0n/github-nvim-theme' })
-	--    use 'marko-cerovac/material.nvim'
-	--	  use 'tiagovla/tokyodark.nvim'
+	--	 { "catppuccin/nvim", as = "catppuccin" }
+	--	   'dikiaap/minimalist'
+	--     'kaicataldo/material.vim'
+	--	   ({ 'projekt0n/github-nvim-theme' })
+	--     'marko-cerovac/material.nvim'
+	--	   'tiagovla/tokyodark.nvim'
 -- Using Packer
 -- Packer
 ---- Using Packer
-	use 'navarasu/onedark.nvim'
-	--	  use 'arzg/vim-colors-xcode'	
-    --    use 'ellisonleao/gruvbox.nvim'
-	--	  use { 'catppuccin/nvim', as='catppuccin' }
-	--    use 'shaunsingh/nord.nvim'
-	--    use { 'sonph/onehalf', rtp='vim/' }
-	--    use 'liuchengxu/space-vim-dark'
-	--    use 'ahmedabdulrahman/aylin.vim'
-	--    use "rebelot/kanagawa.nvim"
+	 'navarasu/onedark.nvim',
+	--	   'arzg/vim-colors-xcode'	
+    --     'ellisonleao/gruvbox.nvim'
+	--	   { 'catppuccin/nvim', as='catppuccin' }
+	--     'shaunsingh/nord.nvim'
+	--     { 'sonph/onehalf', rtp='vim/' }
+	--     'liuchengxu/space-vim-dark'
+	--     'ahmedabdulrahman/aylin.vim'
+	--     "rebelot/kanagawa.nvim"
 
 	-- file tree
-	use {
+	 {
 		'kyazdani42/nvim-tree.lua',
-		requires = 'kyazdani42/nvim-web-devicons'
-	}
+		dependencies = 'kyazdani42/nvim-web-devicons',
+	},
 
 	-- language
-	use { "williamboman/mason.nvim" }
-	use { "williamboman/mason-lspconfig.nvim" }
-	use 'neovim/nvim-lspconfig'
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
-	use 'hrsh7th/nvim-cmp'
-	use 'L3MON4D3/LuaSnip'
-	use 'nvim-treesitter/nvim-treesitter'
-	use 'onsails/lspkind-nvim'
+	 'williamboman/mason.nvim',
+	 'williamboman/mason-lspconfig.nvim',
+	 'neovim/nvim-lspconfig',
+	 'hrsh7th/cmp-nvim-lsp',
+	 'hrsh7th/cmp-buffer',
+	 'hrsh7th/cmp-path',
+	 'hrsh7th/cmp-cmdline',
+	 'hrsh7th/nvim-cmp',
+	 'L3MON4D3/LuaSnip',
+	 'nvim-treesitter/nvim-treesitter',
+	 'onsails/lspkind-nvim',
 
 	-- git
-	use {
+	 {
 		'lewis6991/gitsigns.nvim',
 		tag = 'release',
-	}
+	},
 
-	use 'kdheepak/lazygit.nvim'
+	 'kdheepak/lazygit.nvim',
 
 	-- status line
-	use {
+	 {
 		'nvim-lualine/lualine.nvim',
-		requires = 'kyazdani42/nvim-web-devicons'
-	}
+		dependencies = 'kyazdani42/nvim-web-devicons'
+	},
 
 	-- tagbar
-	use 'simrat39/symbols-outline.nvim'
+	 'simrat39/symbols-outline.nvim',
 
 	-- floating terminal
-	use 'voldikss/vim-floaterm'
+	 'voldikss/vim-floaterm',
 
 	-- file telescope
-	use {
+	 {
 		'nvim-telescope/telescope.nvim',
-		requires = 'nvim-lua/plenary.nvim'
-	}
+		dependencies = 'nvim-lua/plenary.nvim',
+	},
 
 	-- indent guide
-	use "lukas-reineke/indent-blankline.nvim"
+	 "lukas-reineke/indent-blankline.nvim",
 
 	-- english grammar check
-	use 'rhysd/vim-grammarous'
+	 'rhysd/vim-grammarous',
 
-	use {
-	  "windwp/nvim-autopairs",
-      config = function() require("nvim-autopairs").setup {} end
-	}
+	 {
+	  'windwp/nvim-autopairs',
+      config = function() require('nvim-autopairs').setup {} end
+	},
 
-	use ({
+	 {
 		{
 			'windwp/nvim-ts-autotag',
-			require = {
+			dependencies = {
 				{ 'nvim-treesitter/nvim-treesitter' },
 				{ 'hrsh7th/nvim-cmp' },
-			}
-		}
-	})
+			},
+		},
+	},
 	-- fullstack dev
-	use 'pangloss/vim-javascript' --JS support
-	use 'leafgarland/typescript-vim' --TS support
-	use 'maxmellon/vim-jsx-pretty' --JS and JSX syntax
-	use 'jparise/vim-graphql' --GraphQL syntax
-	use 'mattn/emmet-vim'
+	 'pangloss/vim-javascript', --JS support
+	 'leafgarland/typescript-vim', --TS support
+	 'maxmellon/vim-jsx-pretty', --JS and JSX syntax
+	 'jparise/vim-graphql', --GraphQL syntax
+	 'mattn/emmet-vim',
 
-end)
+})

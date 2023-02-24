@@ -4,7 +4,7 @@ function M.config()
 	require 'nvim-treesitter.configs'.setup {
 		-- ensure_installed = "maintained", -- for installing all maintained parsers
 		ensure_installed = { "c", "cpp", "rust", "lua", "python", "javascript", "tsx" }, -- for installing specific parsers
-		sync_install = true, -- install synchronously
+		auto_install = false,
 		ignore_install = {}, -- parsers to not install
 		autopairs = {
 			enable = true,
