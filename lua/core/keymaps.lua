@@ -2,7 +2,6 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- keymaps
-vim.keymap.set('i', '<C-s>', '<esc>')
 -- f: file tree
 vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', ';ft', ':NvimTreeToggle<cr>')
