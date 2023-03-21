@@ -120,5 +120,6 @@ require('lazy').setup({
 	 'maxmellon/vim-jsx-pretty', --JS and JSX syntax
 	 'jparise/vim-graphql', --GraphQL syntax
 	 'mattn/emmet-vim',
+	 'sbdchd/neoformat'
 
 })
