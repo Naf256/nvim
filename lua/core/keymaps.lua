@@ -34,6 +34,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', 'm', 'mj')
 vim.keymap.set('n', '`', '`jzz')
+vim.keymap.set('n', '<leader>z', ':ZenMode<cr>')
 -- w: window
 -- vim.keymap.set('n', '<leader>wh', '<c-w>h')
 -- vim.keymap.set('n', '<leader>wj', '<c-w>j')

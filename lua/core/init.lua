@@ -64,6 +64,7 @@ require("configs.git").config()
 require("configs.bufferline").config()
 require("configs.grammar").config()
 require("nvim-autopairs")
+require("neodev").setup()
 
 local on_attach = function(_, bufnr)
   -- NOTE: Remember that lua is a real programming language, and as such it is possible
@@ -109,11 +110,11 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
-  -- pyright = {},
+  pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {},
 
   lua_ls = {
     Lua = {
@@ -144,7 +145,17 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
-require("telescope").setup()
+require("telescope").setup({
+  defaults = {
+    mappings = {
+      i = {
+        ['<C-u>'] = false,
+        ['<C-d>'] = false,
+      },
+    },
+  },
+})
+
 require("Comment").setup()
 
 --load keybindings
