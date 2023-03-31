@@ -130,7 +130,7 @@ require('lazy').setup({
 		opts = {
 			window = {
 				width = .85,
-				height = 0.8,
+				height = 0.85,
 				options = {
 					number = false,
 					relativenumber = false
