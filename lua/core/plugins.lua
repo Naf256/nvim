@@ -24,7 +24,7 @@ require('lazy').setup({
 		'akinsho/bufferline.nvim',
 		dependencies = 'kyazdani42/nvim-web-devicons',
 	},
-	'moll/vim-bbye',       -- for more sensible delete buffer cmd
+
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
 	-- themes (disabled other themes to optimize startup time)

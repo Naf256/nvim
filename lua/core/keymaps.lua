@@ -52,7 +52,7 @@ vim.keymap.set('n', '<m-=>', '<c-w>+')
 -- b: buffer
 vim.keymap.set('n', '<leader>n', ':bn<cr>')
 vim.keymap.set('n', '<leader>p', ':bp<cr>')
-vim.keymap.set('n', '<leader>d', ':Bdelete<cr>')
+vim.keymap.set('n', '<leader>d', ':bd<cr>')
 -- s: search
 vim.keymap.set('n', '<leader>ss', '/')
 vim.keymap.set('n', '<leader>sw', '/\\<lt>\\><left><left>')
