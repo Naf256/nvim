@@ -2,6 +2,10 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- keymaps
+-- api testing shortcuts
+vim.keymap.set('n', '<leader>at', '<Plug>RestNvim')
+vim.keymap.set('n', '<leader>ap', '<Plug>RestNvimPreview')
+vim.keymap.set('n', '<leader>al', '<Plug>RestNvimLast')
 -- f: file tree
 vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', ';ft', ':NvimTreeToggle<cr>')

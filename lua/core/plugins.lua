@@ -123,6 +123,13 @@ require('lazy').setup({
 	'jparise/vim-graphql',      --GraphQL syntax
 	'mattn/emmet-vim',
 
+	-- helps testing rest apis
+	{
+		"rest-nvim/rest.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+
 	-- formating and editing markdown files
 	'sbdchd/neoformat',
 	{
