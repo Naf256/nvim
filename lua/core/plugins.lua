@@ -49,12 +49,6 @@ require('lazy').setup({
 	--     'ahmedabdulrahman/aylin.vim'
 	--     "rebelot/kanagawa.nvim"
 
-	-- file tree
-	{
-		'kyazdani42/nvim-tree.lua',
-		dependencies = 'kyazdani42/nvim-web-devicons',
-	},
-
 	-- language
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
@@ -130,6 +124,16 @@ require('lazy').setup({
 		opts = {},
 	},
 
+	-- trying out a new nvim tree
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+		opts = {}
+	},
 	-- formating and editing markdown files
 	'sbdchd/neoformat',
 	{

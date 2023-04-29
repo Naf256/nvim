@@ -2,6 +2,7 @@ lua require('core.init')
 
 set guifont=SFMono\ NERD\ Font:h13
 set clipboard^=unnamed,unnamedplus
+set guicursor=i:block
 
 if has('unix')
 	set thesaurus+=/usr/share/dict/words

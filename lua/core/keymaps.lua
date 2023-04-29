@@ -2,14 +2,12 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- keymaps
+-- file tree shortcuts
+vim.keymap.set('n', ';ft', ':Neotree toggle position=left<cr>')
 -- api testing shortcuts
 vim.keymap.set('n', '<leader>at', '<Plug>RestNvim')
 vim.keymap.set('n', '<leader>ap', '<Plug>RestNvimPreview')
 vim.keymap.set('n', '<leader>al', '<Plug>RestNvimLast')
--- f: file tree
-vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
-vim.keymap.set('n', ';ft', ':NvimTreeToggle<cr>')
-vim.keymap.set('n', ';ff', ':NvimTreeFocus<cr>')
 -- y: telescope
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
