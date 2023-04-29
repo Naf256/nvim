@@ -57,7 +57,6 @@ require("impatient")
 
 require("configs.autocomplete").config()
 require("configs.statusline").config()
-require("configs.filetree").config()
 require("configs.treesitter").config()
 require("configs.outlinetree").config()
 require("configs.git").config()

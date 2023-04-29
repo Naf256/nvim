@@ -132,7 +132,11 @@ require('lazy').setup({
 			"kyazdani42/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		},
-		opts = {}
+		opts = {
+			window = {
+				width = 30,
+			}
+		}
 	},
 	-- formating and editing markdown files
 	'sbdchd/neoformat',
