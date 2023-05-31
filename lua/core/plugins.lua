@@ -153,5 +153,4 @@ require('lazy').setup({
 			},
 		}
 	}
-
 })
