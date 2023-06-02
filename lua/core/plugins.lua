@@ -125,19 +125,19 @@ require('lazy').setup({
 	},
 
 	-- trying out a new nvim tree
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
-		},
-		opts = {
-			window = {
-				width = 30,
-			}
-		}
-	},
+	-- {
+	-- 	"nvim-neo-tree/neo-tree.nvim",
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"kyazdani42/nvim-web-devicons",
+	-- 		"MunifTanjim/nui.nvim",
+	-- 	},
+	-- 	opts = {
+	-- 		window = {
+	-- 			width = 30,
+	-- 		}
+	-- 	}
+	-- },
 	-- formating and editing markdown files
 	'sbdchd/neoformat',
 	{
