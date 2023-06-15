@@ -44,8 +44,8 @@ vim.cmd('colorscheme onedark')
 -- nord
 --vim.cmd('colorscheme nord')
 
---gruvbox
---vim.cmd('colorscheme gruvbox')
+-- gruvbox
+-- vim.cmd('colorscheme gruvbox')
 
 --catppuccin
 --vim.cmd('colorscheme catppuccin-macchiato')

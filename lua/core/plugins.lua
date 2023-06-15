@@ -27,27 +27,31 @@ require('lazy').setup({
 
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
-	-- themes (disabled other themes to optimize startup time)
-	'sainnhe/sonokai',
+	-- colorschemes (disabled other themes to optimize startup time)
+	-- 'sainnhe/sonokai',
+	--
+	-- { 'sainnhe/edge' },
 
 	--	 { "catppuccin/nvim", as = "catppuccin" }
 	--	   'dikiaap/minimalist'
 	--     'kaicataldo/material.vim'
 	--	   ({ 'projekt0n/github-nvim-theme' })
 	--     'marko-cerovac/material.nvim'
-	--	   'tiagovla/tokyodark.nvim'
+	-- 'tiagovla/tokyodark.nvim',
 	-- Using Packer
 	-- Packer
 	---- Using Packer
 	'navarasu/onedark.nvim',
 	--	   'arzg/vim-colors-xcode'	
-	--     'ellisonleao/gruvbox.nvim'
+	-- {'ellisonleao/gruvbox.nvim', priority = 1000 },
+
+    {'romgrk/doom-one.vim'},
 	--	   { 'catppuccin/nvim', as='catppuccin' }
 	--     'shaunsingh/nord.nvim'
 	--     { 'sonph/onehalf', rtp='vim/' }
 	--     'liuchengxu/space-vim-dark'
 	--     'ahmedabdulrahman/aylin.vim'
-	--     "rebelot/kanagawa.nvim"
+	-- 'rebelot/kanagawa.nvim',
 
 	-- language
 	'williamboman/mason.nvim',
@@ -55,7 +59,7 @@ require('lazy').setup({
 	'neovim/nvim-lspconfig',
 	'nvim-treesitter/nvim-treesitter',
 	'onsails/lspkind-nvim',
-	{ 'j-hui/fidget.nvim', opts = {} },
+	{ 'j-hui/fidget.nvim', tag = 'legacy', },
 	'folke/neodev.nvim',
 
 	{
@@ -124,7 +128,7 @@ require('lazy').setup({
 		opts = {},
 	},
 
-	-- trying out a new nvim tree
+	-- -- trying out a new nvim tree
 	-- {
 	-- 	"nvim-neo-tree/neo-tree.nvim",
 	-- 	dependencies = {
