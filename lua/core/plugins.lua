@@ -59,7 +59,7 @@ require('lazy').setup({
 	'neovim/nvim-lspconfig',
 	'nvim-treesitter/nvim-treesitter',
 	'onsails/lspkind-nvim',
-	{ 'j-hui/fidget.nvim', tag = 'legacy', },
+	{ 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
 	'folke/neodev.nvim',
 
 	{
