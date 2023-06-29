@@ -38,14 +38,18 @@ require('lazy').setup({
 	--	   ({ 'projekt0n/github-nvim-theme' })
 	--     'marko-cerovac/material.nvim'
 	-- 'tiagovla/tokyodark.nvim',
-	-- Using Packer
-	-- Packer
-	---- Using Packer
+
 	'navarasu/onedark.nvim',
 	--	   'arzg/vim-colors-xcode'	
 	-- {'ellisonleao/gruvbox.nvim', priority = 1000 },
-
-    {'romgrk/doom-one.vim'},
+	--
+	--
+	-- { 'sainnhe/gruvbox-material' },
+	-- { 'decaycs/decay.nvim' },
+	-- { 'pineapplegiant/spaceduck' },
+	-- {'IneptusMechanicus/mechanicus.nvim'},
+	--
+    -- {'romgrk/doom-one.vim'},
 	--	   { 'catppuccin/nvim', as='catppuccin' }
 	--     'shaunsingh/nord.nvim'
 	--     { 'sonph/onehalf', rtp='vim/' }
