@@ -28,7 +28,7 @@ require('lazy').setup({
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
 	-- colorschemes (disabled other themes to optimize startup time)
-	-- 'sainnhe/sonokai',
+	'sainnhe/sonokai',
 	--
 	-- { 'sainnhe/edge' },
 
